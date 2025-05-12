@@ -70,17 +70,17 @@ const Contact = () => {
     <div className="contact-info-container">
       <div className="contact-info-box">
         <h3>Location</h3>
-        <p>51 Buffalo Avenue<br />Brooklyn, NY 11233</p>
+        <p> 26th of July Corridor<br/>6th of October, Egypt</p>
       </div>
       
       <div className="contact-info-box">
         <h3>Phone</h3>
-        <p><a href="tel:13479859067">(347) 985-9067</a></p>
+        <p><a href="tel:16111">tel:16111</a></p>
       </div>
       
       <div className="contact-info-box">
         <h3>Email</h3>
-        <p><a href="mailto:info@happy-cork.com">info@happy-cork.com</a></p>
+        <p><a href="info@souadkafafihospital.com">info@souadkafafihospital.com</a></p>
       </div>
     </div>
   </section>
