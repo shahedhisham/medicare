@@ -6,20 +6,6 @@ import Lottie from 'lottie-react';
 import contactL from "../Animation/contactlogo.json";
 import './contact.css';
 
-const contactInfo = [
-  {
-    icon: 'https://img.icons8.com/ios-filled/50/ffffff/phone.png',
-    text: '16111',
-  },
-  {
-    icon: 'https://img.icons8.com/ios-filled/50/ffffff/marker.png',
-    text: '26th of July Corridor, 6th of October, Egypt',
-  },
-  {
-    icon: 'https://img.icons8.com/ios-filled/50/ffffff/email.png',
-    text: 'info@saudihospital.com',
-  },
-];
 
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -67,31 +53,38 @@ const Contact = () => {
       </header>
       
       <main className="contact-main">
-        <div className="contact-section">
-          <div className="contact-cards">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="contact-card">
-                <img src={info.icon} alt="icon" className="contact-icon" />
-                <p className="contact-text">{info.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
 
-        <div className="contact-container">
-          <section className="contact-location-section">
-            <div className="contact-map-wrapper">
-              <iframe
-                title="Hospital Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.3741310239116!2d30.963398675342987!3d29.99741187494722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458573fca14f8dd%3A0x5b4426c019012200!2sThe%20Memorial%20Souad%20Kafafi%20University%20Hospital!5e0!3m2!1sen!2seg!4v1745408205018!5m2!1sen!2seg"
-                style={{ border: 0, width: '100%', height: '450px' }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </section>
-        </div>
+<div className="contact-container">
+  <section className="contact-location-section">
+    <div className="contact-map-wrapper">
+      <iframe
+        title="Business Location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.3063874233135!2d-73.93384868459516!3d40.67897937933485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bcea44a5f6d%3A0x8f8e9e9e9e9e9e9e!2s51%20Buffalo%20Ave%2C%20Brooklyn%2C%20NY%2011233%2C%20USA!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+        style={{ border: 0, width: '100%', height: '450px' }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+    
+    <div className="contact-info-container">
+      <div className="contact-info-box">
+        <h3>Location</h3>
+        <p>51 Buffalo Avenue<br />Brooklyn, NY 11233</p>
+      </div>
+      
+      <div className="contact-info-box">
+        <h3>Phone</h3>
+        <p><a href="tel:13479859067">(347) 985-9067</a></p>
+      </div>
+      
+      <div className="contact-info-box">
+        <h3>Email</h3>
+        <p><a href="mailto:info@happy-cork.com">info@happy-cork.com</a></p>
+      </div>
+    </div>
+  </section>
+</div>
 
         <div className="contact-us-container">
   <div className="contact-content-wrapper">
