@@ -1,7 +1,20 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"; // Add these imports
 import "./home.css";
 
 const Home = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("");
+
+  // Check if user is logged in when component mounts
+  useEffect(() => {
+    const user = localStorage.getItem("user");
+    if (user) {
+      const userData = JSON.parse(user);
+      setIsLoggedIn(true);
+      setUserName(userData.name); // Assuming you store the name in your user object
+    }
+  }, [])
   const categories = [
     {
       title: "Obstetrics & Gynecology",
@@ -87,7 +100,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="main-container">
+     <div className="main-container">
       <div className="navbar">
         <div className="nav-left">
           <Link to="/">Home</Link>
@@ -95,8 +108,14 @@ const Home = () => {
           <Link to="/contact">Contact Us</Link>
         </div>
         <div className="nav-right">
-          <Link to="/LogIn">Log In</Link>
-          <Link to="/SignUpSelection">Sign Up</Link>
+          {isLoggedIn ? (
+            <span className="welcome-message">Hello, {userName}</span>
+          ) : (
+            <>
+              <Link to="/LogIn">Log In</Link>
+              <Link to="/SignUpSelection">Sign Up</Link>
+            </>
+          )}
         </div>
       </div>
 
