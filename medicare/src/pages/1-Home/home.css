@@ -1,5 +1,4 @@
 
-
 *{
   box-sizing: border-box;
 }
@@ -19,6 +18,21 @@ body {
   z-index: 1000;
   border-bottom: 2px solid rgb(214, 214, 214); /* Add a thin white line */
 
+}
+/* Add these styles to your existing CSS */
+.welcome-message {
+  color: #fff; /* or your preferred color */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50; /* or your preferred color */
+  border-radius: 4px;
+  margin-left: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav-left a,
